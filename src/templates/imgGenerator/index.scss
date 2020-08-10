@@ -21,9 +21,6 @@ body {
     }
     .top{
       margin: 0 auto;
-      &::after{
-        content: '我也要定制海报';
-      }
     }
     .index-text{
       width: 100%;
@@ -225,8 +222,7 @@ body {
   z-index: 1;
   padding-bottom: 10px;
   box-sizing: border-box;
-  &::after{
-    content: '立即生成我的海报';
+  span{
     display: inline-block;
     text-align: center;
     line-height: 44px;
@@ -288,10 +284,6 @@ body {
   color: #fff;
   margin-top: 20px;
   text-align: center;
-}
-
-.poster-inner  .poster-btn::after {
-  content: '前往探索青年香';
 }
 
 .toast {

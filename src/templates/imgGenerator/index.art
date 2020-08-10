@@ -1,8 +1,8 @@
 <div class="youthLifeHome">
   <div class="index">
     <div class="inner"></div>
-    <div id="index-bottom" class="sms-bottom top"></div>
-    <p class="index-text">了解野兽青年<img class="arrow" src="{{cdnPath}}arrow.png"/></p>
+    <div id="custom-immediately" class="sms-bottom top"></div>
+    <p class="index-text" id="understand_young-beast">了解野兽青年<img class="arrow" src="{{cdnPath}}arrow.png"/></p>
   </div>
   <div class="cropper-wrap">
     <div class="cropper-mainbg" id="cropper-mainbg"></div>
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div id="sms-bottom" class="sms-bottom centerBtn"></div>
+    <div id="generate-poster" class="sms-bottom centerBtn"></div>
   </div>
 
   <div class="poster">

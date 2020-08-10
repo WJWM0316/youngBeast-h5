@@ -101,7 +101,7 @@ window.onload = async () => {
     $('.camera-pop').hide()
   })
   // 提交按钮
-  $('#sms-bottom').click(function () {
+  $('#generate-poster').click(function () {
     let input = $('input')
     if (input.eq(0).val()){
       data.sms.name = input.eq(0).val()
@@ -168,13 +168,22 @@ window.onload = async () => {
     $('.poster').hide()
   })
 
-  $('#index-bottom').click(function () {
+  $('#generate-poster').click(function () {
     $('.sms').show()
     $('.index').hide()
   })
+
+  // 百度统计
+  function baiduTj () {
+    var _hmt = _hmt || [];
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?95617c9cfe1a844ee5bc7ce245cf1f82";
+    var s = document.body;
+    s.appendChild(hm);
+  }
+  baiduTj()
+
 }
-
-
 
 // base64转化成blob
 function base64ToBlob (base64) {

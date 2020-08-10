@@ -129,9 +129,19 @@
   color: #fa5151;
 }
 
-
-
 .weui-actionsheet_toggle {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
+}
+
+.fadeOut{
+  animation: fadeOutadm 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOutadm {
+  0% {
+    opacity: 0;
+  1%{
+    opacity: 1;
+  }
 }
