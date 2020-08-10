@@ -1,0 +1,95 @@
+<div class="youngBeast">
+  <div class="music">
+    <audio autoplay loop="true" src="{{cdnPath}}music.mp3?a=1" id="audio"></audio>
+    <img class="music-icon" src="{{cdnPath}}music-icon.png"/>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="first common swiper-slide">
+        <div class="bg first-bg">
+          <div class="wrap">
+            <img class="top-text" src="{{cdnPath}}top-text.png"/>
+            <img class="first-img top-img opacityText" src="{{cdnPath}}first-text.png?a=1"/>
+            <img class="turnPage" src="{{cdnPath}}turnPage.png"/>
+            <img class="dialog opacityTextBottom" src="{{cdnPath}}dialog-01.png"/>
+            <img class="boy" src="{{cdnPath}}boy.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="second common swiper-slide">
+        <div class="bg third-bg">
+          <div class="wrap">
+            <img class="top-text" src="{{cdnPath}}top-text.png"/>
+            <img class="turnPage" src="{{cdnPath}}turnPage.png"/>
+            <img class="swiper-lazy second-img top-img opacityText" data-src="{{cdnPath}}second-text.png?a=1"/>
+            <img class="girl" src="{{cdnPath}}girl.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="third common swiper-slide">
+        <div class="bg fourth-bg">
+          <div class="third-wrap wrap">
+            <img class="swiper-lazy third-logo opacityText" data-src="{{cdnPath}}third-logo.png"/>
+            <img class="swiper-lazy third-title opacityTextOne" data-src="{{cdnPath}}third-title.png"/>
+            <img class="swiper-lazy third-text opacityTextTwo" data-src="{{cdnPath}}third-text.png?a=4"/>
+            <img class="turnPage" src="{{cdnPath}}turnPage.png"/>
+            <img class="boy" src="{{cdnPath}}boy.png"/>
+            <img class="girl girl-left" src="{{cdnPath}}girl.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="fourth common swiper-slide">
+        <div class="bg sixth-bg">
+          <div class="third-wrap wrap">
+            <img class="top-text" src="{{cdnPath}}top-text.png"/>
+            <img class="swiper-lazy fourth-title top-img opacityText" data-src="{{cdnPath}}fourth-title.png?a=1"/>
+            <img class="swiper-lazy fourth-img opacityTextOne" data-src="{{cdnPath}}fourth-img.png?a=1"/>
+            <img class="turnPage" src="{{cdnPath}}turnPage.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="fifth common swiper-slide">
+        <div class="bg sixth-bg">
+          <div class="third-wrap wrap">
+            <img class="top-text" src="{{cdnPath}}top-text.png"/>
+            <img class="swiper-lazy fifth-title top-img opacityText" data-src="{{cdnPath}}fifth-title.png?a=1"/>
+            <img class="swiper-lazy fifth-img opacityTextOne" data-src="{{cdnPath}}fifth-img.png?a=5"/>
+            <img class="swiper-lazy fifth-text opacityTextBottomOne" data-src="{{cdnPath}}fifth-text.png?a=5"/>
+            <img class="turnPage" src="{{cdnPath}}turnPage.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="sixth common swiper-slide">
+        <div class="bg sixth-bg">
+          <div class="third-wrap wrap">
+            <img class="top-text" src="{{cdnPath}}top-text.png"/>
+            <img class="swiper-lazy sixth-title top-img-02 opacityText" data-src="{{cdnPath}}sixth-title.png"/>
+            <img class="swiper-lazy sixth-img opacityTextOne" data-src="{{cdnPath}}sixth-img.png?a=2"/>
+            <img class="swiper-lazy dialog-02 dialog opacityTextBottomOne" data-src="{{cdnPath}}dialog-02.png?a=1"/>
+            <img class="turnPage" src="{{cdnPath}}turnPage.png"/>
+            <img class="boy" src="{{cdnPath}}boy.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="seventh common swiper-slide">
+        <div class="bg sixth-bg">
+          <div class="third-wrap wrap">
+            <img class="top-text" src="{{cdnPath}}top-text.png"/>
+            <img class="swiper-lazy seventh-title top-img-03 opacityText" data-src="{{cdnPath}}seventh-title.png?a=1"/>
+            <img class="swiper-lazy seventh-text opacityTextOne" data-src="{{cdnPath}}seventh-text.png?a=1"/>
+            <div class="seventh-bottom opacityTextTwo">
+              <div class="seventh-bottom-bnt">
+                <span id="for-oneself" class="seventh-toWebSite">选香送自己</span>
+              </div>
+              <div class="seventh-bottom-bnt seventh-bnt">
+                <span id="for-friends" class="seventh-toWebSite">选香送好友</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

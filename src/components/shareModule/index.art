@@ -1,0 +1,27 @@
+<div class="share" style="background: url({{cdnPath}}shareBtn.png);background-size: 100% 100%;">
+	<span class="backHome"></span>
+	<span class="sharePoster"></span>
+</div>
+<div class="choseBox">
+	<div class="inner">
+		{{if !noCard}}
+		<div class="btn_warp" id="share_friend">
+			<div class="btnCon btn1">
+				<div class="title">分享给好友或群聊<i class="icon">一键访问</i></div>
+			</div>
+		</div>
+		{{/if}}
+		{{if !noPoster}}
+		<div class="btn_warp" id="share_save-poster" posterUrl="{{cdnPath}}poster.jpg">
+			<div class="btnCon btn2">
+				<div class="title">生成朋友圈分享图<i class="icon">发圈必备</i></div>
+			</div>
+		</div>
+		{{/if}}
+		<img src="https://attach.lieduoduo.ziwork.com/front-assets/available/clo.png" class="clo">
+	</div>
+</div>
+<div class="sharePop">
+	<img class="icon" src="{{cdnPath}}shareGuide.png">
+</div>
+<script src="./index.js"></script>

@@ -1,0 +1,64 @@
+<div class="youthLifeHome">
+  <div class="index">
+    <div class="inner"></div>
+    <div id="index-bottom" class="sms-bottom top"></div>
+    <p class="index-text">了解野兽青年<img class="arrow" src="{{cdnPath}}arrow.png"/></p>
+  </div>
+  <div class="cropper-wrap">
+    <div class="cropper-mainbg" id="cropper-mainbg"></div>
+    <span class="close">取消</span>
+    <span class="succuess">完成</span>
+  </div>
+  <div class="camera-pop">
+    <div class="bg"></div>
+    <div class="inner">
+      <p class="camera-pop-top">选择相册</p>
+      <p class="chooseMan" >默认头像：男</p>
+      <p class="chooseWoman">默认头像：女</p>
+      <p class="camera-pop-close">取消</p>
+    </div>
+  </div>
+  <!-- 填写信息页 !-->
+  <div class="sms">
+    <img class="sms-title" src="{{cdnPath}}sms-title.png">
+    <div class="sms-main">
+      <div class="sms-name sms-common">
+        我是<input type="text" value="{{name}}"  placeholder="请输入昵称"/>
+      </div>
+      <div class="sms-disc sms-common">
+        我是<input type="text" value="{{name}}" maxlength="6" placeholder="XXXX"/>青年
+      </div>
+      <div class="sms-fineOneth sms-common">
+        我可以<input type="text" value="{{name}}" maxlength="11" placeholder="请输入"/>
+      </div>
+      <div class="sms-fineTowth sms-common">
+        也可以<input type="text" value="{{name}}" maxlength="11" placeholder="请输入"/>
+      </div>
+      <div class="sms-fineThird sms-common">
+        还可以<input type="text" value="{{name}}" maxlength="11" placeholder="请输入"/>
+      </div>
+      <div class="sms-fineWant sms-common">
+        2020 我想<input type="text" value="{{name}}" maxlength="11" placeholder="请输入"/>
+      </div>
+      <div class="sms-upData">
+        <div class="sms-Upload-img">
+          <img class="camera" src="{{cdnPath}}Upload.png"/>
+        </div>
+      </div>
+    </div>
+    <div id="sms-bottom" class="sms-bottom centerBtn"></div>
+  </div>
+
+  <div class="poster">
+    <div class="poster-inner">
+      <div class="posster-img">
+        <img class="img" />
+        <img class="poster-close" src="{{cdnPath}}close.png">
+      </div>
+      <p class="desc">长按图片,保存到相册</p>
+      <div class="sms-bottom poster-btn">前往探索青年香</div>
+    </div>
+  </div>
+
+  <div class="toast">请完善海报信息</div>
+</div>

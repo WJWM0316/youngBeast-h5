@@ -1,0 +1,17 @@
+<div class="page__bd">
+    {{if type === 1}}
+    <div class="weui-loadmore">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+    {{else if type === 2}}
+    <div class="weui-loadmore weui-loadmore_line">
+        <span class="weui-loadmore__tips">暂无数据</span>
+    </div>
+    {{else if type === 3}}
+    <div class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+        <span class="weui-loadmore__tips"></span>
+    </div>
+    {{/if}}
+</div>
+<script src="./index.js"></script>

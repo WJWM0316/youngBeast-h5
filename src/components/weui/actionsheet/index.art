@@ -1,0 +1,17 @@
+<div class="weui-mask" id="iosMask" style="display: none;"></div>
+<div class="weui-actionsheet" id="iosActionsheet">
+    <div class="weui-actionsheet__title">
+        <p class="weui-actionsheet__title-text">{{title}}</p>
+    </div>
+    <div class="weui-actionsheet__menu">
+        {{each list}}
+            <div class="weui-actionsheet__cell selectItem {{$value.className}}" clickFun="{{$value.clickFun}}">{{$value.name}}</div>
+        {{/each}}
+    </div>
+    {{if !isCancle}}
+    <div class="weui-actionsheet__action">
+        <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+    </div>
+    {{/if}}
+</div>
+<script src="./index.js"></script>

@@ -1,0 +1,25 @@
+{{if type === 'success'}}
+<div class="toastWrap" id="toast" style="display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+        <p class="weui-toast__content">已完成</p>
+    </div>
+</div>
+{{else if type === 'loading'}}
+<div class="toastWrap" id="loadingToast" style="display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
+</div>
+{{else}}
+<div class="toastWrap" id="loadingToast" style="display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast ordinary">
+        <p class="weui-toast__content ">{{content}}</p>
+    </div>
+</div>
+{{/if}}
+<script src="./index.js"></script>

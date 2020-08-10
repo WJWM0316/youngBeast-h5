@@ -1,0 +1,74 @@
+// ======== 全局样式reset ========
+
+
+* {
+  -webkit-appearance: none; /* 针对ios中会出现的阴影 */
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(200,200,200,0);
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: -apple-system-font,Helvetica Neue,sans-serif;
+  line-height: 1.42857143;
+  overflow-x: hidden;
+  background: #fff;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    background: none;
+    &:focus {
+      outline: none;
+    }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+audio,
+canvas,
+video,
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+
+[v-cloak] {
+  display: none !important;
+}
+
+a {
+  text-decoration:none;
+}
+
+::-webkit-input-placeholder {
+  color: #BCBCBC;
+}

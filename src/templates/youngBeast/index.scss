@@ -1,0 +1,319 @@
+body,html{
+  overflow: hidden;
+  background-color: #FFFFFF;
+  touch-action: none;
+}
+.swiper-container{
+  height: 100vh;
+}
+.music{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  z-index: 10;
+  video{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  img{
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+  .music-icon{
+    animation: spinMusic 3s linear infinite;
+    animation-play-state: paused;
+  }
+  .music-go{
+    animation-play-state: running;
+  }
+}
+.common{
+  width: 100%;
+  height: 100vh;
+}
+.swiper-wrapper{
+  background: #0029a6;
+}
+.swiper-slide-active{
+  .opacityText{
+    animation: opacityText 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0,-0.01,.31,.99);
+  }
+  .opacityTextOne{
+    opacity: 0;
+    animation: opacityText 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0,-0.01,.31,.99)
+  }
+  .opacityTextTwo{
+    opacity: 0;
+    animation: opacityText 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0,-0.01,.31,.99)
+  }
+  .opacityTextBottom{
+    opacity: 0;
+    animation: opacityTextBottom 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0,-0.01,.31,.99);
+  }
+  .opacityTextBottomOne{
+    opacity: 0;
+    animation: opacityTextBottom 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0,-0.01,.31,.99);
+  }
+}
+.first-bg{
+  background-image: url('#{$cdnPath}youngBeast/bg-01.png');
+}
+.third-bg{
+  background-image: url('#{$cdnPath}youngBeast/bg-03.png');
+}
+.fourth-bg{
+  background-image: url('#{$cdnPath}youngBeast/bg-04.png');
+}
+.sixth-bg{
+  background-image: url('#{$cdnPath}youngBeast/bg-06.png');
+}
+.bg{
+  background-color: #0029a6;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.wrap{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('#{$cdnPath}youngBeast/bg-top.png'), url('#{$cdnPath}youngBeast/bg-bottom.png');
+  background-position: top center, bottom center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto,100% auto;
+  position: relative;
+  .turnPage{
+    width: 16px;
+    position: absolute;
+    transform: translate3d(-50%, 0, 0);
+    bottom: 72px;
+    animation: turnPage 2s infinite;
+    opacity: 1;
+  }
+  .boy{
+    opacity: 1;
+    width: 80px;
+    position: absolute;
+    right: 27px;
+    bottom: 0;
+  }
+  .girl{
+    width: 76px;
+    position: absolute;
+    right: 42px;
+    bottom: 0;
+    opacity: 1;
+  }
+  .girl-left{
+    left: 22px;
+  }
+  .top-text{
+    opacity: 1;
+    width: 331px;
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+  }
+  .dialog{
+    width: 96px;
+    position: absolute;
+    right: 65px;
+    bottom: 121px;
+  }
+  .dialog-02{
+    width: 66px;
+  }
+  img{
+    opacity: 0;
+  }
+}
+.top-img{
+  margin-top: -60px;
+}
+.top-img-02{
+  margin-top: -40px;
+}
+.top-img-03{
+  margin-top: -7%;
+}
+
+.first-img{
+  width: 275px;
+}
+
+.second-img{
+  width: 319px;
+}
+
+.third-logo{
+  width: 77px;
+  margin-top: -25%;
+}
+.third-title{
+  width: 236px;
+  margin-top: 18px;
+}
+.third-text{
+  width: 314px;
+  margin-top: 23px;
+}
+.third-wrap{
+  flex-direction: column;
+}
+
+.fourth-title{
+  width: 185px;
+}
+.fourth-img{
+  width: 266px;
+  margin-top: 19px;
+}
+
+.fifth-title{
+  width: 236px;
+}
+.fifth-img{
+  margin-top: 25px;
+  width: 307px;
+}
+.fifth-text{
+  width: 41px;
+  position: absolute;
+  top: 59%;
+  left: 262px;
+}
+
+.sixth-title{
+  width: 284px;
+}
+.sixth-img{
+  width: 290px;
+  margin-top: 10px;
+}
+
+.seventh-title{
+  width: 260px;
+}
+.seventh-text{
+  width: 250px;
+  margin-top: 22px;
+}
+.seventh-bottom{
+  margin: 62px auto 0 auto;
+  width: 210px;
+}
+.seventh-bottom-bnt{
+  width: 210px;
+  height: 44px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  &::after{
+    content: '';
+    display: inline-block;
+    width: 210px;
+    height: 44px;
+    background: #385EE3;
+    border-radius: 2px;
+    position: absolute;
+    left: 3px;
+    top: -4px;
+    z-index: 0;
+  }
+  span{
+    width: 210px;
+    height: 44px;
+    background: #E41625;
+    border-radius: 2px;
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    z-index: 2;
+    color: #FFFFFF;
+    line-height: 44px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+.seventh-bnt{
+  margin-top: 22px;
+  background: #E41625;
+  &::after{
+    background: #385EE3;
+  }
+  span{
+    background: #FFFFFF;
+    color: #022792;
+  }
+}
+
+// css动画封装
+@keyframes spinMusic{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes turnPage{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// 动画样式 文字渐变效果
+@keyframes opacityText{
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes opacityTextBottom{
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 36px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

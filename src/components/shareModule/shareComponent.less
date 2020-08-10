@@ -1,0 +1,113 @@
+.share {
+	width: 94px;
+	height: 33px;
+	display: flex;
+	position: absolute;
+	top: 18px;
+	right: 0;
+	background-size: 100% 100%;
+	span {
+		flex: 1;
+	}
+}
+.choseBox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  .inner {
+  	width:345px;
+    background:rgba(255,255,255,1);
+    border-radius:12px 0px 12px 12px;
+    border:1px solid rgba(0,0,0,1);
+    box-sizing: border-box;
+    padding: 6px 30px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -172.5px;
+  }
+  .btn_warp {
+    .close {
+      width:22px;
+      height:17px;
+      background:rgba(255,220,41,1);
+      border-radius:50px 50px 0px 0px;
+      border:1px solid rgba(0,0,0,1);
+      position: absolute;
+      right: -1px;
+      top: -17px;
+      background: #FFDC29;
+      overflow: hidden;
+      text-align: center;
+      z-index: 11;
+      box-sizing: border-box;
+      padding: 0;
+      .icon {
+        font-size: 12px;
+        line-height: 12px;
+        color: #282828;
+        display: block;
+        margin: 6px 0;
+      }
+    }
+    .btnCon {
+      padding: 26px 0;
+      text-align: left;
+      background: #fff url('https://lieduoduo-uploads-test.oss-cn-shenzhen.aliyuncs.com/front-assets/images/btn_share_wechat.png') no-repeat right center;
+      background-size: 38px 38px;
+      
+      .title {
+        line-height: 20px;
+        font-size: 16px;
+        font-weight:500;
+        color:rgba(40,40,40,1);
+        .icon {
+          padding: 2.5px 7.5px;
+          font-size: 13px;
+          font-weight:500;
+          color:#572C84;
+          line-height:15px;
+          border-radius:10px;
+          border:1px solid #572C84;
+          vertical-align:2px;
+          margin-left: 10px;
+          box-sizing: border-box;
+          display: inline-block;
+        }
+      }
+      &.btn2 {
+        background-image: url('https://attach.lieduoduo.ziwork.com/front-assets/available/friend.png');
+        border-top:1px solid rgba(232,233,235,1);
+      }
+    }
+  }
+  .clo {
+    width:44px;
+    height:33px;
+    position: absolute;
+    right: 0;
+    top: -33px;
+  }
+}
+.sharePop {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+  display: none;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 10;
+	.icon {
+		width: 244px;
+		top: 12px;
+		right: 12px;
+		display: block;
+		position: absolute;
+	}
+}

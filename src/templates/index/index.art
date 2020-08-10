@@ -1,0 +1,23 @@
+
+<% include('./header.art', {
+      title: title
+}) %>
+
+<p class="h1"><a href="">This is just an 4444444444</a></p>
+<p class="h2"><a class="p1" href="">This is just an 66666666666</a></p>
+
+<button id="showIOSActionSheet">actionsheet</button>
+<button id="showIOSDialog">dialog</button>
+<button>loadmore</button>
+<button id="showToast">toast</button>
+{{include './footer.art'}}
+
+	
+
+<% include('../../components/weui/actionsheet/index.art', data1) %>	
+
+<% include('../../components/weui/dialog/index.art', data2) %>	
+
+<% include('../../components/weui/loadmore/index.art', data3) %>	
+
+<% include('../../components/weui/toast/index.art', data4) %>
