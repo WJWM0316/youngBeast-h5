@@ -1,46 +1,24 @@
 // import "../example.css";
 import "./index.css";
-// import $ from 'jquery';
 
-// $(function () {
-//   var $iosActionsheet = $('#iosActionsheet');
-//   var $iosMask = $('#iosMask');
+ function init () {
 
-//   function hideActionSheet() {
-//       $iosActionsheet.removeClass('weui-actionsheet_toggle');
-//       $iosMask.fadeOut(200);
-//   }
-
-//   $iosMask.on('click', hideActionSheet);
-//   $('#iosActionsheetCancel').on('click', hideActionSheet);
-
-//   $("#showIOSActionSheet").on("click", function(){
-//       $iosActionsheet.addClass('weui-actionsheet_toggle');
-//       $iosMask.fadeIn(200);
-//   });
-
-//   let getData = document.getElementsByClassName('selectItem')
-//   for (let i = 0; i < getData.length; i++) {
-//     getData[i].addEventListener('click', eval(`(${getData[i].getAttribute('clickFun')})`))
-//     getData[i].addEventListener('click', hideActionSheet)
-//   }
-// })
-
-window.ready = function () {
   var $iosActionsheet = document.getElementById('iosActionsheet')
   var $iosMask = document.getElementById('iosMask')
 
   function hideActionSheet() {
-    $iosActionsheet.classList.add('weui-actionsheet_toggle')
-    $iosMask.classList.add('fadeOut')
+    $iosActionsheet.classList.remove('weui-actionsheet_toggle')
+    $iosMask.classList.remove('fadeInMask')
+    $iosMask.classList.add('fadeOutMask')
   }
 
   $iosMask.addEventListener('click', hideActionSheet)
   document.getElementById('iosActionsheetCancel').addEventListener('click', hideActionSheet)
 
   document.getElementById('showIOSActionSheet').addEventListener("click", function(){
-    $iosActionsheet.classList.add('weui-actionsheet_toggle');
-    $iosMask.fadeIn(200)
+    $iosActionsheet.classList.add('weui-actionsheet_toggle')
+    $iosMask.classList.remove('fadeOutMask')
+    $iosMask.classList.add('fadeInMask')
   })
 
   let getData = document.getElementsByClassName('selectItem')
@@ -49,3 +27,16 @@ window.ready = function () {
     getData[i].addEventListener('click', hideActionSheet)
   }
 }
+
+// 使用document.readyState确保DOM加载完毕后执行
+// 注意： 试过window.onload = function () {} 无法执行
+function onReady(fn){
+  var readyState = document.readyState;
+  if(readyState === 'interactive' || readyState === 'complete') {
+    fn()
+  }else{
+      window.addEventListener("DOMContentLoaded",fn);
+  }
+}
+
+onReady(init)

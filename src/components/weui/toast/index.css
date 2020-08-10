@@ -39,11 +39,6 @@ body[data-weui-theme='dark'] .weui-toast {
   background-color: #606060;
 }
 
-@media (prefers-color-scheme:dark) {
-  body:not([data-weui-theme='light']) .weui-toast {
-    background-color: #606060;
-  }
-}
 
 .weui-icon_toast {
   display: block;
@@ -90,7 +85,6 @@ body[data-weui-theme='dark'] .weui-toast {
 }
 .weui-icon-success-no-circle,.weui-icon-success-no-circle-thin {
   color: #07c160;
-  color: var(--weui-BRAND);
 }
 .weui-loading {
   width: 20px;
@@ -128,5 +122,33 @@ body[data-weui-theme='dark'] .weui-toast {
   100% {
     -webkit-transform: rotate3d(0,0,1,360deg);
     transform: rotate3d(0,0,1,360deg);
+  }
+}
+
+.fadeOutToast{
+  animation: fadeOutadmToast .3s;
+  animation-fill-mode: forwards;
+  display: none !important;
+}
+@keyframes fadeOutadmToast {
+  0% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.fadeInToast{
+  animation: fadeIndmToast .3s;
+  animation-fill-mode: forwards;
+  display: block !important;
+}
+@keyframes fadeIndmToast {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

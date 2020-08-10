@@ -1,15 +1,31 @@
 import "./index.css"
-import $ from 'jquery';
-$(function(){
 
-  $('#dialogs').on('click', '.weui-dialog__btn', function(){
-      $(this).parents('.js_dialog').fadeOut(200);
-      let clickFun = eval(`(${$(this).attr('clickFun')})`)
-      clickFun()
-  });
+function init () {
+  var js_dialog = document.getElementsByClassName('js_dialog')[0]
+  document.getElementById('dialogs').addEventListener('click', function(evnet){
+    console.log(0)
+    js_dialog.classList.remove('fadeIn')
+    js_dialog.classList.add('fadeOut')
+    var clickFun = eval(`(${evnet.target.getAttribute('clickFun')})`)
+    clickFun()
+  })
 
-  $('#showIOSDialog').on('click', function(){
-    $('.js_dialog').fadeIn(200);
+  document.getElementById('showIOSDialog').addEventListener('click', function(){
+    console.log(0)
+    js_dialog.classList.remove('fadeOut')
+    js_dialog.classList.add('fadeIn')
+  })
+}
 
-  });
-});
+// 使用document.readyState确保DOM加载完毕后执行
+// 注意： 试过window.onload = function () {} 无法执行
+function onReady(fn){
+  var readyState = document.readyState;
+  if(readyState === 'interactive' || readyState === 'complete') {
+    fn()
+  }else{
+      window.addEventListener("DOMContentLoaded",fn);
+  }
+}
+
+onReady(init)

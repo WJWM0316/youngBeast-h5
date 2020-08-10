@@ -37,7 +37,7 @@ const sassResourcesLoader = {
 const miniCssExtractPluginLoader = {
   loader:  MiniCssExtractPlugin.loader,
   options: {
-    hmr: process.env.NODE_ENV === 'development',
+    hmr: process.env.NODE_ENV === 'test',
     sourceMap: true
   }
 }
@@ -113,7 +113,6 @@ module.exports = (env, argv) => {
       )
     })
   } else {
-    console.log(222)
     entryObj[argv['enter']] = [path.resolve(__dirname, `src/templates/${argv['enter']}/index.js`)]
     htmlWebpackPlugin.push(
       new HtmlWebpackPlugin({
@@ -133,122 +132,122 @@ module.exports = (env, argv) => {
 
 
   let config = {
-      entry: {
-        ...entryObj
+    entry: {
+      ...entryObj
+    },
+    output: {
+      filename: `js/[name].[contenthash:8].js`,
+      chunkFilename: 'js/[name].js',
+      path: path.join(__dirname, `dist`)
+    },
+    resolve: {
+      modules: [
+        path.resolve(__dirname, 'node_modules'),
+      ],
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+        'API': path.resolve(__dirname, 'src/api'),
+        'CONFIG': path.resolve(__dirname, 'config'),
+        'ASSETS': path.resolve(__dirname, 'src/assets'),
+        'UTILS': path.resolve(__dirname, 'src/utils')
+      }
+    },
+    module: {
+      rules: [
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        loader: 'url-loader',
+        options: {
+          // Inline files smaller than 10 kB (10240 bytes)
+          limit: 10 * 1024,
+        },
       },
-      output: {
-        filename: `js/[name].[contenthash:8].js`,
-        chunkFilename: 'js/[name].js',
-        path: path.join(__dirname, `dist`)
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          // Inline files smaller than 10 kB (10240 bytes)
+          limit: 10 * 1024,
+          // Remove the quotes from the url
+          // (they’re unnecessary in most cases)
+          noquotes: true,
+        },
       },
-      resolve: {
-        modules: [
-          path.resolve(__dirname, 'node_modules'),
-        ],
-        alias: {
-          '@': path.resolve(__dirname, 'src'),
-          'API': path.resolve(__dirname, 'src/api'),
-          'CONFIG': path.resolve(__dirname, 'config'),
-          'ASSETS': path.resolve(__dirname, 'src/assets'),
-          'UTILS': path.resolve(__dirname, 'src/utils')
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        loader: 'image-webpack-loader',
+        options: {
+          optipng: { // 使用 imagemin-optipng 压缩 png，enable: false 为关闭
+            enabled: true,
+          },
+          pngquant: { // 使用 imagemin-pngquant 压缩 png
+            quality: [0, 1],
+            speed: 4
+          },
         }
       },
-      module: {
-        rules: [
-        {
-          test: /\.(jpe?g|png|gif)$/,
-          loader: 'url-loader',
-          options: {
-            // Inline files smaller than 10 kB (10240 bytes)
-            limit: 10 * 1024,
-          },
-        },
-        {
-          test: /\.svg$/,
-          loader: 'svg-url-loader',
-          options: {
-            // Inline files smaller than 10 kB (10240 bytes)
-            limit: 10 * 1024,
-            // Remove the quotes from the url
-            // (they’re unnecessary in most cases)
-            noquotes: true,
-          },
-        },
-        {
-          test: /\.(jpe?g|png|gif|svg)$/,
-          loader: 'image-webpack-loader',
-          options: {
-            optipng: { // 使用 imagemin-optipng 压缩 png，enable: false 为关闭
-              enabled: true,
-            },
-            pngquant: { // 使用 imagemin-pngquant 压缩 png
-              quality: [0, 1],
-              speed: 4
-            },
-          }
-        },
-        {
-          test: /\.art$/,
-          use: [{
-            loader: "art-template-loader"
-          }]
-        },
-        {
-          test: /\.(sc|c|le)ss$/,
-          use: [
-            process.env.NODE_ENV !== 'test' ? miniCssExtractPluginLoader : 'style-loader',
-            "css-loader",
-            "less-loader",
-            "sass-loader",
-            postcssLoader,
-            sassResourcesLoader
-          ]
-        },
-        {
-          test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "file"
-        },
-        {
-          test: /\.(woff|woff2)$/,
-          loader: "url?prefix=font/&limit=5000"
-        },
-        {
-          test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "url?limit=10000&mimetype=application/octet-stream"
-        },
-        {
-          test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "url?limit=10000&mimetype=image/svg+xml"
-        },
-        {
-          test: /\.(js|js.map)$/,
-          use:{
-            loader:'babel-loader?cacheDirectory'
-          },
-          exclude: path.resolve(__dirname, 'node_modules'),
-          
+      {
+        test: /\.art$/,
+        use: [{
+          loader: "art-template-loader"
         }]
       },
-      plugins: pluginsArray(env, argv),
-      // optimization: { // 优化项
-      //   splitChunks: { //分割代码块
-      //     cacheGroups: { // 缓存
-      //       // commons: { // 公共的代码
-      //       //   name: "commons", // 抽离出来的模块名
-      //       //   chunks: 'all', // 初始化，从入口文件开始抽离
-      //       //   minSize: 0, // 如果这个代码大于0字节
-      //       //   minChunks: 2, // 这个代码引用多少次才需要抽离
-      //       // },
-      //       vendors: { // 抽取第三方模块
-      //         test: /node_modules/,
-      //         name: 'vendor',
-      //         chunks: 'all',
-      //       }
-      //     }
-      //   }
-      // }
-    
+      {
+        test: /\.(sc|c|le)ss$/,
+        use: [
+          process.env.NODE_ENV !== 'test' ? miniCssExtractPluginLoader : 'style-loader',
+          "css-loader",
+          "less-loader",
+          "sass-loader",
+          postcssLoader,
+          sassResourcesLoader
+        ]
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file"
+      },
+      {
+        test: /\.(woff|woff2)$/,
+        loader: "url?prefix=font/&limit=5000"
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/octet-stream"
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=image/svg+xml"
+      },
+      {
+        test: /\.(js|js.map)$/,
+        use:{
+          loader:'babel-loader?cacheDirectory'
+        },
+        exclude: path.resolve(__dirname, 'node_modules'),
+        
+      }]
+    },
+    plugins: pluginsArray(env, argv),
+    // optimization: { // 优化项
+    //   splitChunks: { //分割代码块
+    //     cacheGroups: { // 缓存
+    //       // commons: { // 公共的代码
+    //       //   name: "commons", // 抽离出来的模块名
+    //       //   chunks: 'all', // 初始化，从入口文件开始抽离
+    //       //   minSize: 0, // 如果这个代码大于0字节
+    //       //   minChunks: 2, // 这个代码引用多少次才需要抽离
+    //       // },
+    //       vendors: { // 抽取第三方模块
+    //         test: /node_modules/,
+    //         name: 'vendor',
+    //         chunks: 'all',
+    //       }
+    //     }
+    //   }
+    // }
   }
+
   // 开发环境
   if (process.env.NODE_ENV === 'test') {
     // config.devtool = 'eval'
@@ -259,7 +258,7 @@ module.exports = (env, argv) => {
       compress:true,
       //配置服务端口号
       port:8090,
-      hothot: true // 开启配置
+      // hothot: true // 开启配置
     }
   } else {
     config.devtool = 'cheap-module-source-map'

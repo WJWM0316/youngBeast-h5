@@ -134,14 +134,30 @@
   transform: translate(0,0);
 }
 
-.fadeOut{
-  animation: fadeOutadm 2s;
+.fadeOutMask{
+  animation: fadeOutadmMask .3s;
   animation-fill-mode: forwards;
+  display: none !important;
 }
-@keyframes fadeOutadm {
+@keyframes fadeOutadmMask {
+  0% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.fadeInMask{
+  animation: fadeIndmMask .3s;
+  animation-fill-mode: forwards;
+  display: block !important;
+}
+@keyframes fadeIndmMask {
   0% {
     opacity: 0;
-  1%{
+  }
+  100%{
     opacity: 1;
   }
 }
