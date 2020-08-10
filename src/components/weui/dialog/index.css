@@ -7,7 +7,6 @@
   -webkit-transform: translate(0,-50%);
   transform: translate(0,-50%);
   background-color: #fff;
-  background-color: var(--weui-BG-2);
   text-align: center;
   border-radius: 12px;
   overflow: hidden;
@@ -42,7 +41,6 @@
   -webkit-hyphens: auto;
   hyphens: auto;
   color: rgba(0,0,0,0.5);
-  color: var(--weui-FG-1);
 }
 
 .weui-dialog__bd:first-child {
@@ -50,7 +48,6 @@
   padding: 32px 24px 0;
   font-weight: 700;
   color: rgba(0,0,0,0.9);
-  color: var(--weui-FG-0);
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -81,9 +78,7 @@
   right: 0;
   height: 1px;
   border-top: 1px solid rgba(0,0,0,0.1);
-  border-top: 1px solid var(--weui-DIALOG-LINE-COLOR);
   color: rgba(0,0,0,0.1);
-  color: var(--weui-DIALOG-LINE-COLOR);
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -96,7 +91,6 @@
   -webkit-flex: 1;
   flex: 1;
   color: #576b95;
-  color: var(--weui-LINK);
   font-weight: 700;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -105,7 +99,6 @@
 
 .weui-dialog__btn:active {
   background-color: #ececec;
-  background-color: var(--weui-BG-COLOR-ACTIVE);
 }
 
 .weui-dialog__btn:after {
@@ -116,9 +109,7 @@
   width: 1px;
   bottom: 0;
   border-left: 1px solid rgba(0,0,0,0.1);
-  border-left: 1px solid var(--weui-DIALOG-LINE-COLOR);
   color: rgba(0,0,0,0.1);
-  color: var(--weui-DIALOG-LINE-COLOR);
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleX(0.5);
@@ -131,7 +122,6 @@
 
 .weui-dialog__btn_default {
   color: rgba(0,0,0,0.9);
-  color: var(--weui-FG-HALF);
 }
 @media screen and (min-width:352px) {
   .weui-dialog {
@@ -149,7 +139,6 @@
   z-index: 5000;
   line-height: 1.4;
   background-color: #fff;
-  background-color: var(--weui-BG-2);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   overflow: hidden;
@@ -214,7 +203,6 @@
 .weui-half-screen-dialog__title {
   display: block;
   color: rgba(0,0,0,0.9);
-  color: var(--weui-FG-0);
   font-weight: 700;
   font-size: 15px;
 }
@@ -222,7 +210,6 @@
 .weui-half-screen-dialog__subtitle {
   display: block;
   color: rgba(0,0,0,0.5);
-  color: var(--weui-FG-1);
   font-size: 10px;
 }
 
@@ -235,14 +222,12 @@
   padding-bottom: 40px;
   font-size: 14px;
   color: rgba(0,0,0,0.9);
-  color: var(--weui-FG-0);
 }
 
 .weui-half-screen-dialog__desc {
   font-size: 17px;
   font-weight: 700;
   color: rgba(0,0,0,0.9);
-  color: var(--weui-FG-0);
   line-height: 1.4;
 }
 
@@ -250,7 +235,6 @@
   padding-top: 16px;
   font-size: 14px;
   color: rgba(0,0,0,0.3);
-  color: var(--weui-FG-2);
   line-height: 1.4;
 }
 

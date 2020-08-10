@@ -2,11 +2,9 @@ import "./index.css";
 
 let render = require('./index.art');
 let ceshi  =  'nihao'
-
 let data = {
     title: 'My Page121212',
     data1: {
-      type: 'ios',
       title: '测试看看',
       className: 'ceshi',
       list: [
@@ -43,9 +41,10 @@ let data = {
       }`
     },
     data3: {
-      type: 1
+      type: 2
     },
     data4: {
+      type: 'loading',
       content: '测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看测试看看'
     }
 };

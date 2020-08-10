@@ -8,7 +8,7 @@ $(function () {
 
   function hideActionSheet() {
       $iosActionsheet.removeClass('weui-actionsheet_toggle');
-      $iosMask.fadeOut(200);
+      $iosMask.fadeOut(300);
   }
 
   $iosMask.on('click', hideActionSheet);
@@ -16,7 +16,7 @@ $(function () {
 
   $("#showIOSActionSheet").on("click", function(){
       $iosActionsheet.addClass('weui-actionsheet_toggle');
-      $iosMask.fadeIn(200);
+      $iosMask.fadeIn(300);
   });
 
   let getData = document.getElementsByClassName('selectItem')

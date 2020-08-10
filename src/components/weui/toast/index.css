@@ -39,11 +39,6 @@ body[data-weui-theme='dark'] .weui-toast {
   background-color: #606060;
 }
 
-@media (prefers-color-scheme:dark) {
-  body:not([data-weui-theme='light']) .weui-toast {
-    background-color: #606060;
-  }
-}
 
 .weui-icon_toast {
   display: block;
@@ -90,7 +85,6 @@ body[data-weui-theme='dark'] .weui-toast {
 }
 .weui-icon-success-no-circle,.weui-icon-success-no-circle-thin {
   color: #07c160;
-  color: var(--weui-BRAND);
 }
 .weui-loading {
   width: 20px;
