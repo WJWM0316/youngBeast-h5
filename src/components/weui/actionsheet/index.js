@@ -8,8 +8,8 @@ import "./index.css";
 
   function hideActionSheet() {
     $iosActionsheet.classList.remove('weui-actionsheet_toggle')
-    $iosMask.classList.remove('fadeInMask')
-    $iosMask.classList.add('fadeOutMask')
+    $iosMask.classList.remove('fadeIn')
+    $iosMask.classList.add('fadeOut')
   }
 
   $iosMask.addEventListener('click', hideActionSheet)
@@ -17,8 +17,8 @@ import "./index.css";
 
   document.getElementById('showIOSActionSheet').addEventListener("click", function(){
     $iosActionsheet.classList.add('weui-actionsheet_toggle')
-    $iosMask.classList.remove('fadeOutMask')
-    $iosMask.classList.add('fadeInMask')
+    $iosMask.classList.remove('fadeOut')
+    $iosMask.classList.add('fadeIn')
   })
 
   let getData = document.getElementsByClassName('selectItem')

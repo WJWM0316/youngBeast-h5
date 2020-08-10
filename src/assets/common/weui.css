@@ -1,0 +1,27 @@
+.fadeOut{
+  animation: fadeOutadm .3s;
+  animation-fill-mode: forwards;
+  display: none !important;
+}
+@keyframes fadeOutadmMask {
+  0% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.fadeIn{
+  animation: fadeIndm .3s;
+  animation-fill-mode: forwards;
+  display: block !important;
+}
+@keyframes fadeIndmMask {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

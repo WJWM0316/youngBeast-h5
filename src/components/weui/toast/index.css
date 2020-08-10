@@ -1,4 +1,4 @@
-
+@import 'ASSETS/common/weui.css';
 .weui-toast {
   position: fixed;
   z-index: 5000;
@@ -122,33 +122,5 @@ body[data-weui-theme='dark'] .weui-toast {
   100% {
     -webkit-transform: rotate3d(0,0,1,360deg);
     transform: rotate3d(0,0,1,360deg);
-  }
-}
-
-.fadeOutToast{
-  animation: fadeOutadmToast .3s;
-  animation-fill-mode: forwards;
-  display: none !important;
-}
-@keyframes fadeOutadmToast {
-  0% {
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-
-.fadeInToast{
-  animation: fadeIndmToast .3s;
-  animation-fill-mode: forwards;
-  display: block !important;
-}
-@keyframes fadeIndmToast {
-  0% {
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
   }
 }
