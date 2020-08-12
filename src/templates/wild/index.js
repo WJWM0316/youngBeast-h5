@@ -3,7 +3,7 @@ let configENV = require("CONFIG")
 let render = require('./index.art')
 
 let data = {
-  cdnPath: configENV.CDNPATH
+  cdnPath: configENV.CDNPATH + 'wild/'
 }
 
 let title = "收到一条新邀请"

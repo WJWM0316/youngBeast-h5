@@ -1,7 +1,7 @@
 <div class="wild">
-  <img class="wild-bg" src="{{cdnPath}}wild/wild-bg.png?a=1" />
+  <img class="wild-bg" src="{{cdnPath}}wild-bg.png?a=1" />
   <div class="wild-icon">
-    <img src="{{cdnPath}}wild/wenhao.png" />
+    <img src="{{cdnPath}}wenhao.png" />
   </div>
   <div class="wild-pop">
     <div class="wild-main">
@@ -25,7 +25,7 @@
         <p class="wild-text">你的知心小姐姐，欢迎和我吐槽、聊天、聊人生</p>
       </div>
       <div class="wild-buttom">
-        <img src="{{cdnPath}}wild/x.png"/>
+        <img src="{{cdnPath}}x.png"/>
       </div>
     </div>
   </div>
