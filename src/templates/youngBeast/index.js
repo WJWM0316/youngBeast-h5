@@ -9,7 +9,7 @@ let configENV = require("CONFIG")
 guideConfig()
 
 let data = {
-    cdnPath: configENV.PICKMECDNPATH + 'youngBeast/',
+    cdnPath: configENV.CDNPATH + 'youngBeast/',
     page: localStorage.get('page') || 0
 }
 
