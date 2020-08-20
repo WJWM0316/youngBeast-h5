@@ -1,0 +1,99 @@
+html,body{
+  max-width: 1140px !important;
+}
+.wild{
+  width: 100vw;
+  height: 100vh;
+  min-height: 580px;
+  position: relative;
+  overflow: hidden;
+  .wild-bg{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .wild-icon{
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    img{
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .wild-pop{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #00000099;
+    display: none;
+  }
+  .wild-main{
+    width: 300px;
+    height: 358px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 36px 20px;
+    overflow: hidden;
+  }
+  .wild-title{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .wild-wrap{
+    margin-top: 10px;
+    line-height: 30px;
+    color: #333333;
+    span{
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid #66666666;
+      text-align: center;
+      line-height: 20px;
+      margin-right: 10px;
+      margin-top: 5px;
+      vertical-align: top;
+    }
+  }
+  .wild-text{
+    font-size: 15px;
+    font-weight: 300;
+    display: inline-block;
+    width: 240px;
+  }
+  .text-top{
+    margin-top: 35px;
+  }
+  .wild-buttom{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    background: #032692;
+    color: #ffffff;
+    text-align: center;
+    img{
+      width: 15px;
+      position: absolute;
+      left: 22px;
+      top: 22px;
+    }
+  }
+}
