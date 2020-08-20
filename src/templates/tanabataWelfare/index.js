@@ -3,7 +3,7 @@ let configENV = require("CONFIG")
 let render = require('./index.art')
 
 let data = {
-  cdnPath: configENV.CDNPATH + 'wild/'
+  cdnPath: configENV.CDNPATH + 'tanabataWelfare/'
 }
 
 let title = "七夕福利进群免费领！"
@@ -17,31 +17,20 @@ if (typeof document === 'object') {
   link.rel = 'icon'
   link.href = `${data.cdnPath}favicon.ico`
   document.getElementsByTagName('head')[0].appendChild(link)
-  
-  var wildPop = document.getElementsByClassName('wild-pop')[0]
-
-  document.getElementsByClassName('wild-icon')[0].addEventListener('click', function () {
-    console.log(0)
-    wildPop.style.display = 'block'
-  })
-
-  document.getElementsByClassName('wild-buttom')[0].addEventListener('click', function () {
-    wildPop.style.display = 'none'
-  })
 
   // 百度统计
-  // function baiduTj () {
-  //   var _hmt = _hmt || [];
-  //   var hm = document.createElement("script");
-  //   hm.src = "https://hm.baidu.com/hm.js?985c2b2be27d55f20a267ba7dddd290a";
-  //   var s = document.body;
-  //   s.appendChild(hm);
-  // }
+  function baiduTj () {
+    var _hmt = _hmt || [];
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?bc17f14d39b856a887a213f5aebf3d4a";
+    var s = document.body;
+    s.appendChild(hm);
+  }
 
-  // var readyState = document.readyState
-  // if(readyState === 'interactive' || readyState === 'complete') {
-  //   baiduTj()
-  // }else{
-  //     window.addEventListener("DOMContentLoaded", baiduTj)
-  // }
+  var readyState = document.readyState
+  if(readyState === 'interactive' || readyState === 'complete') {
+    baiduTj()
+  }else{
+      window.addEventListener("DOMContentLoaded", baiduTj)
+  }
 }
