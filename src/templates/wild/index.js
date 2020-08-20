@@ -28,4 +28,20 @@ if (typeof document === 'object') {
   document.getElementsByClassName('wild-buttom')[0].addEventListener('click', function () {
     wildPop.style.display = 'none'
   })
+
+  // 百度统计
+  function baiduTj () {
+    var _hmt = _hmt || [];
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?985c2b2be27d55f20a267ba7dddd290a";
+    var s = document.body;
+    s.appendChild(hm);
+  }
+
+  var readyState = document.readyState
+  if(readyState === 'interactive' || readyState === 'complete') {
+    baiduTj()
+  }else{
+      window.addEventListener("DOMContentLoaded", baiduTj)
+  }
 }
