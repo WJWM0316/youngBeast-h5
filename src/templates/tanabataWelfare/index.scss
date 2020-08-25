@@ -1,0 +1,16 @@
+html,body{
+  max-width: 1140px !important;
+}
+.wild{
+  width: 100vw;
+  height: 100vh;
+  min-height: 580px;
+  position: relative;
+  overflow: hidden;
+  .wild-bg{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
