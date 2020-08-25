@@ -56,7 +56,7 @@
         <img class="poster-close" src="{{cdnPath}}close.png">
       </div>
       <p class="desc">长按图片,保存到相册</p>
-      <div class="sms-bottom poster-btn">前往探索青年香</div>
+      <div class="sms-bottom poster-btn"><span>前往探索青年香</span></div>
     </div>
   </div>
 
