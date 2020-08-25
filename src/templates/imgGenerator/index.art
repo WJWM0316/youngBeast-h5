@@ -61,4 +61,7 @@
   </div>
 
   <div class="toast">请完善海报信息</div>
+
+  <% include('../../components/weui/toast/index.art', {type: 'loading'}) %>	
+
 </div>

@@ -142,9 +142,13 @@ window.onload = async () => {
     formData.append('desc2', data.sms.fineTowth);
     formData.append('desc3', data.sms.fineThird);
     formData.append('desc4', data.sms.fineWant);
+    $("#loadingToast").show()
     createPosrer(formData).then(res => {
       $('.poster-inner .img').attr('src', res.data.url)
       $('.poster').show()
+      $("#loadingToast").hide()
+    }).catch(e => {
+      $("#loadingToast").hide()
     })
   })
 
