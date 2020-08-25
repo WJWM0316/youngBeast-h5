@@ -49,6 +49,9 @@ const pluginsArray = (env, argv) => {
       allChunks:true
     }),
     new OptimizeCSSAssetsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    })
   ]
   if (argv['report']) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
@@ -86,6 +89,7 @@ const pluginsArray = (env, argv) => {
     )
     
   }
+  
   return array
 }
 module.exports = (env, argv) => {

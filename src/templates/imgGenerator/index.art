@@ -1,7 +1,7 @@
 <div class="youthLifeHome">
   <div class="index">
     <div class="inner"></div>
-    <div id="custom-immediately" class="sms-bottom top"></div>
+    <div class="sms-bottom top"><span id="custom-immediately" >我也要定制海报</span></div>
     <p class="index-text" id="understand_young-beast">了解野兽青年<img class="arrow" src="{{cdnPath}}arrow.png"/></p>
   </div>
   <div class="cropper-wrap">
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div id="generate-poster" class="sms-bottom centerBtn"></div>
+    <div class="sms-bottom centerBtn"><span id="generate-poster" >立即生成我的海报</span></div>
   </div>
 
   <div class="poster">

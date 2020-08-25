@@ -168,7 +168,7 @@ window.onload = async () => {
     $('.poster').hide()
   })
 
-  $('#generate-poster').click(function () {
+  $('#custom-immediately').click(function () {
     $('.sms').show()
     $('.index').hide()
   })

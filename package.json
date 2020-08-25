@@ -2,7 +2,7 @@
   "name": "youngBeast-h5",
   "version": "1.0.0",
   "scripts": {
-    "start": "cross-env NODE_ENV=test --mode=development webpack-dev-server",
+    "start": "cross-env NODE_ENV=test webpack-dev-server  --progress --colors",
     "build:dev": "cross-env NODE_ENV=development webpack --mode=development  --config webpack.config.js",
     "build:pro": " cross-env NODE_ENV=production webpack --mode=production  --config webpack.config.js"
   },

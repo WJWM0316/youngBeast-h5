@@ -2,7 +2,7 @@ const configENV = (env) => {
 	let config = {}
 	switch (process.env.NODE_ENV) {
 		case 'test':
-			config.NODEAPI = 'http://192.168.5.52:3000'
+			config.NODEAPI = 'http://192.168.5.52:3002'
 			config.WORKAPI = 'https://work-api.youngbeast.ziwork.com'
 			config.CDNPATH = 'http://attach.youngbeast.ziwork.com/artTemplate/'
 			break
