@@ -257,7 +257,7 @@ module.exports = (env, argv) => {
     // config.devtool = 'eval'
     config.devServer = {
       //服务器的IP地址，可以使用IP也可以使用localhost
-      host: '127.0.0.1',
+      host: '0.0.0.0',
       //服务端压缩是否开启
       compress:true,
       //配置服务端口号

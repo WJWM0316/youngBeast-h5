@@ -59,13 +59,12 @@ window.onload = async () => {
     
   }
   $('.succuess').click(function () {
-    cropper.getCroppedCanvas().toBlob((toBlob) => {
-      data.sms.img = toBlob
-      $('.sms-Upload-img').html(`<img class="toBlob-img" src="${URL.createObjectURL(toBlob)}">`)
-      $('.camera').hide()
-      $('.cropper-wrap').hide()
-      $('.sms').show()
-    })
+    let canvas = cropper.getCroppedCanvas()
+    data.sms.img = canvas.toDataURL();
+    $('.sms-Upload-img').html(`<img class="toBlob-img" src="${data.sms.img}">`)
+    $('.camera').hide()
+    $('.cropper-wrap').hide()
+    $('.sms').show()
   })
 
   $('.close').click(function () {
@@ -156,14 +155,14 @@ window.onload = async () => {
   $(".chooseMan").click(function () {
     $('.camera-pop').hide()
     $('.sms-Upload-img').html(`<img class="toBlob-img" src="${manImg}">`)
-    data.sms.img = base64ToBlob(manImg)
+    data.sms.img = manImg // base64ToBlob(manImg)
   })
 
   // 选择默认女
   $(".chooseWoman").click(function () {
     $('.camera-pop').hide()
     $('.sms-Upload-img').html(`<img class="toBlob-img" src="${womanImg}">`)
-    data.sms.img = base64ToBlob(womanImg)
+    data.sms.img = womanImg // base64ToBlob(womanImg)
   })
 
   $('.index-text, .poster-btn').click(toWebSite)
